@@ -3,3 +3,5 @@
 ### Get Minecraft Pi: Reborn
 #### [Minecraft Pi Reborn Offical](https://jenkins.thebrokenrail.com/job/minecraft-pi-reborn/job/master/)
 #### [Minecraft Pi Reborn Extened](https://github.com/NoozSBC/mcpi-reborn-extended/releases/latest)
+
+Based off [Planet Launcher](https://github.com/Red-exe-Engineer/Planet)
