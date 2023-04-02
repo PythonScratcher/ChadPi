@@ -4,7 +4,7 @@
 git clone https://github.com/PythonScratcher/ChadPi.git ~/chadpi
 
 # Create a symbolic link to the main script for easy execution
-sudo cat << EOF > ~/usr/bin/chadpi
+sudo cat << EOF > /usr/bin/chadpi
 python3 ~/chadpi/main.py
 EOF
 
