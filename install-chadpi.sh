@@ -5,7 +5,7 @@ git clone https://github.com/PythonScratcher/ChadPi.git ~/chadpi
 
 # Create a symbolic link to the main script for easy execution
 sudo ln -s ~/chadpi/main.py /usr/bin/chadpi
-
+sudo chmod 777 /usr/bin/chadpi
 # Create a .desktop file for ChadPi in the applications directory
 cat << EOF > ~/.local/share/applications/chadpi.desktop
 [Desktop Entry]
