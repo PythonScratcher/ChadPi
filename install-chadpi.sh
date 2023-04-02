@@ -1,9 +1,11 @@
 #!/bin/bash
 
-echo "ChadPi Installer v0.7"
-# Check if the script is being run as root
-if [ "$EUID" -ne 0 ]
-  then echo "Please run as root (sudo)"
+# Prompt for username
+read -p "Enter username to install ChadPi: " username
+
+# Check if username exists
+if [ ! -d "/home/$username" ]
+  then echo "User $username does not exist"
   exit
 fi
 
@@ -16,20 +18,15 @@ pip install pillow
 pip install qtwidgets
 pip install darkdetect
 
-# Prompt for username
-read -p "Enter user to install ChadPi to: " username
-
-# Check if username exists
-if [ ! -d "/home/$username" ]
-  then echo "User $username does not exist"
-  exit
-fi
-
 # Clone the ChadPi repository from GitHub into the user's home directory
 git clone https://github.com/PythonScratcher/ChadPi.git /home/$username/chadpi
 
+# Set ownership and permission of chadpi directory
+chown -R $username:$username /home/$username/chadpi
+chmod -R 755 /home/$username/chadpi
+
 # Create a symbolic link to the main script for easy execution
-sudo ln -s /home/$username/chadpi/main.py /usr/bin/chadpi
+ln -s /home/$username/chadpi/main.py /usr/bin/chadpi
 
 # Create a .desktop file for ChadPi in the applications directory
 cat << EOF > /home/'$username'/.local/share/applications/chadpi.desktop
@@ -38,7 +35,7 @@ Type=Application
 Name=ChadPi
 Comment=Minecraft Pi: Reborn Launcher
 Exec=python3 /home/'$username'/chadpi/main.py
-Icon=/home/$username/chadpi/assets/icon.png
+Icon=/home/'$username'/chadpi/assets/icon.png
 Terminal=false
 Categories=Games;
 EOF
