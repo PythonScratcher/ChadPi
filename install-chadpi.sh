@@ -4,24 +4,18 @@
 git clone https://github.com/PythonScratcher/ChadPi.git ~/chadpi
 
 # Create a symbolic link to the main script for easy execution
-ln -s ~/chadpi/main.py /bin/chadpi
-
-# Add the ~/bin directory to the user's PATH environment variable
-echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
-
-# Source the ~/.bashrc file to apply the PATH changes
-source ~/.bashrc
+sudo ln -s ~/chadpi/main.py /usr/bin/chadpi
 
 # Create a .desktop file for ChadPi in the applications directory
 cat << EOF > ~/.local/share/applications/chadpi.desktop
 [Desktop Entry]
 Type=Application
 Name=ChadPi
-Comment=A Python script for ...
+Comment=Minecraft Pi: Reborn Launcher
 Exec=python3 ~/chadpi/main.py
-Icon=~/chadpi/assets/icon512.png
+Icon=~/chadpi/assets/icon.png
 Terminal=false
-Categories=Utility;
+Categories=Games;
 EOF
 
 # Update the applications list
