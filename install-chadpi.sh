@@ -24,4 +24,4 @@ EOF
 update-desktop-database ~/.local/share/applications/
 
 echo "ChadPi has been installed! You can now execute it by typing 'chadpi' in the command line or searching for 'ChadPi' in the applications menu."
-rm install-chadpi.sh
+# rm install-chadpi.sh
