@@ -4,7 +4,7 @@
 git clone https://github.com/PythonScratcher/ChadPi.git ~/chadpi
 
 # Create a symbolic link to the main script for easy execution
-ln -s ~/chadpi/main.py ~/bin/chadpi
+ln -s ~/chadpi/main.py /bin/chadpi
 
 # Add the ~/bin directory to the user's PATH environment variable
 echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
