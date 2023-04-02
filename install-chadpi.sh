@@ -1,5 +1,5 @@
 #!/bin/bash
-
+echo "Installer V0.2"
 # Clone the ChadPi repository from GitHub into the user's home directory
 git clone https://github.com/PythonScratcher/ChadPi.git ~/chadpi
 
@@ -24,4 +24,3 @@ EOF
 update-desktop-database ~/.local/share/applications/
 
 echo "ChadPi has been installed! You can now execute it by typing 'chadpi' in the command line or searching for 'ChadPi' in the applications menu."
-# rm install-chadpi.sh
