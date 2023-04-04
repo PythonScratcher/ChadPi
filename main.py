@@ -189,7 +189,7 @@ class Planet(QMainWindow):
 
         try:
             RPC = pypresence.Presence(
-                787496148763541505
+                1092749647677759528
             )  # Try to initialize pypresence and find Discord
             RPC.connect()  # Connect to Discord
             # Set the RPC Status
