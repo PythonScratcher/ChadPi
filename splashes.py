@@ -72,5 +72,6 @@ SPLASHES = [
     "Xin chào Việt Nam",
     "Ayubowan ශ්‍රී ලංකාව",
     "Moïen Lëtzebuerg",
+    "Donate to UKRAINE! www.unicef.org",
     
 ]
